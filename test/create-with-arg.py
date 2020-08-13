@@ -1,24 +1,19 @@
-import sys,os
+import os
+import sys
 
 print(sys.argv)
 
 
 def main():
     l = sys.argv[1].split("/")
-    alist = [
-        [
-            l[-1].upper(),
-            l[-1],
-            ','+sys.argv[2] if len(sys.argv)>=3 else ''
-        ]
-        ]
-    dirName = '/'.join(l[:-1])
+    alist = [[l[-1].upper(), l[-1], "," + sys.argv[2] if len(sys.argv) >= 3 else ""]]
+    dirName = "/".join(l[:-1])
     # Create target directory & all intermediate directories if don't exists
     try:
-        print("Directory " , dirName ,  " Created ")
+        print("Directory ", dirName, " Created ")
         os.makedirs(dirName)
     except FileExistsError:
-        print("Directory " , dirName ,  " already exists")
+        print("Directory ", dirName, " already exists")
     for item in alist:
         f = open(sys.argv[1] + ".py", "w+")
         # for i in range(10):
@@ -32,7 +27,7 @@ if __name__ == '__main__':
     unittest.main()
 
                 """
-        f.write(content.format(item[0], item[1],item[2]))
+        f.write(content.format(item[0], item[1], item[2]))
         f.close()
 
 
