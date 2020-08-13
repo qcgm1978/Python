@@ -1,7 +1,7 @@
 from typing import Callable
 
 
-def bisection(function: Callable[[float], float], a: float, b: float) -> float:
+def bisection(function: Callable[[float], float], a: float, b: float,tol: float=10 ** -7) -> float:
     """
     finds where function becomes 0 in [a,b] using bolzano
     >>> bisection(lambda x: x ** 3 - 1, -5, 5)
@@ -32,7 +32,7 @@ def bisection(function: Callable[[float], float], a: float, b: float) -> float:
         raise ValueError("could not find root in given interval.")
     else:
         mid: float = start + (end - start) / 2.0
-        while abs(start - mid) > 10 ** -7:  # until precisely equals to 10^-7
+        while abs(start - mid) > tol:  # until precisely equals to 10^-7
             if function(mid) == 0:
                 return mid
             elif function(mid) * function(start) < 0:
