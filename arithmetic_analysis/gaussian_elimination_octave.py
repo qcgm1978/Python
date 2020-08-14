@@ -3,6 +3,7 @@ Gaussian elimination method for solving a system of linear equations.
 Gaussian elimination - https://en.wikipedia.org/wiki/Gaussian_elimination
 """
 import numpy as np
+from oct2py import  octave
 def gaussian_elimination(coefficients: list, vector: list,returnList:bool=False) -> np.array:
     """
     This function performs Gaussian elimination method
@@ -19,7 +20,7 @@ def gaussian_elimination(coefficients: list, vector: list,returnList:bool=False)
            [2.5]])
     """
     # coefficients must to be a square matrix so we need to check first
-    rows, columns = np.shape(coefficients)
+    rows, columns = octave.int32(octave.size(coefficients))[0]
     if rows != columns:
         return []
     # augmented matrix

@@ -1,4 +1,4 @@
-
+import numpy as np
 import os
 import unittest
 import sys
@@ -6,6 +6,7 @@ currentdir = os.path.dirname(os.path.realpath(__file__))
 parentdir = os.path.dirname(currentdir)
 sys.path.append(parentdir)
 from arithmetic_analysis.bisection import bisection
+from arithmetic_analysis.gaussian_elimination import gaussian_elimination
 class TDD_BISECTION(unittest.TestCase):
     def test_annotations(self):
         from typing import Dict
@@ -27,6 +28,13 @@ class TDD_BISECTION(unittest.TestCase):
 
         self.assertAlmostEqual(bisection(lambda x:x+2,-1,-20),-2,6)
         self.assertAlmostEqual((bisection(lambda x: x ** 3 - 1, -5, 5)),1)
+    def test_gaussian_elimination(self):
+        mat = [[2, 2, -1], [0, -2, -1], [0, 0, 5]]
+        self.assertIsInstance(mat,list)
+        self.assertEqual(gaussian_elimination(mat, [[5], [-7], [15]],returnList=True),[[2.],
+       [2.],
+       [3.]])
+        self.assertEqual(gaussian_elimination(mat[:2], [[5], [-7], [15]],returnList=True),[])
 if __name__ == '__main__':
     unittest.main()
 
