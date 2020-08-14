@@ -1,7 +1,9 @@
 from typing import Callable
 
 
-def bisection(function: Callable[[float], float], a: float, b: float,tol: float=10 ** -7) -> float:
+def bisection(
+    function: Callable[[float], float], a: float, b: float, tol: float = 10 ** -7
+) -> float:
     """
     finds where function becomes 0 in [a,b] using bolzano
     >>> bisection(lambda x: x ** 3 - 1, -5, 5)
