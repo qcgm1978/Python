@@ -2,6 +2,7 @@
 ## Arithmetic Analysis
   * [Bisection](https://github.com/TheAlgorithms/Python/blob/master/arithmetic_analysis/bisection.py)
   * [Gaussian Elimination](https://github.com/TheAlgorithms/Python/blob/master/arithmetic_analysis/gaussian_elimination.py)
+  * [Gaussian Elimination Octave](https://github.com/TheAlgorithms/Python/blob/master/arithmetic_analysis/gaussian_elimination_octave.py)
   * [In Static Equilibrium](https://github.com/TheAlgorithms/Python/blob/master/arithmetic_analysis/in_static_equilibrium.py)
   * [Intersection](https://github.com/TheAlgorithms/Python/blob/master/arithmetic_analysis/intersection.py)
   * [Lu Decomposition](https://github.com/TheAlgorithms/Python/blob/master/arithmetic_analysis/lu_decomposition.py)
@@ -687,6 +688,10 @@
   * [Upper](https://github.com/TheAlgorithms/Python/blob/master/strings/upper.py)
   * [Word Occurrence](https://github.com/TheAlgorithms/Python/blob/master/strings/word_occurrence.py)
   * [Z Function](https://github.com/TheAlgorithms/Python/blob/master/strings/z_function.py)
+
+## Test
+  * [Arithmatic](https://github.com/TheAlgorithms/Python/blob/master/test/arithmatic.py)
+  * [Create-With-Arg](https://github.com/TheAlgorithms/Python/blob/master/test/create-with-arg.py)
 
 ## Traversals
   * [Binary Tree Traversals](https://github.com/TheAlgorithms/Python/blob/master/traversals/binary_tree_traversals.py)
