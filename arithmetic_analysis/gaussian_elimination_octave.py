@@ -3,8 +3,12 @@ Gaussian elimination method for solving a system of linear equations.
 Gaussian elimination - https://en.wikipedia.org/wiki/Gaussian_elimination
 """
 import numpy as np
-from oct2py import  octave
-def gaussian_elimination(coefficients: list, vector: list,returnList:bool=False) -> np.array:
+from oct2py import octave
+
+
+def gaussian_elimination(
+    coefficients: list, vector: list, returnList: bool = False
+) -> np.array:
     """
     This function performs Gaussian elimination method
     Examples:
@@ -36,9 +40,14 @@ def gaussian_elimination(coefficients: list, vector: list,returnList:bool=False)
         augmented_mat[:, 0:columns], augmented_mat[:, columns : columns + 1]
     )
     return list(x) if returnList else x
+
+
 if __name__ == "__main__":
     import doctest
+
     doctest.testmod()
+
+
 def retroactive_resolution(coefficients: np.matrix, vector: np.array) -> np.array:
     """
     This function performs a retroactive linear system resolution
