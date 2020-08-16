@@ -66,8 +66,8 @@ if __name__ == "__main__":
     forces = array(
         [
             polar_force(30 * 9.81, 15),
-            polar_force(215, 180 - 45),
-            polar_force(264, 90 - 30),
+            polar_force(215,  45),
+            polar_force(264,  30),
         ]
     )
 

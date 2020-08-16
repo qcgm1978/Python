@@ -49,6 +49,11 @@ class TDD_BISECTION(unittest.TestCase):
             gaussian_elimination(mat[:2], [[5], [-7], [15]], returnList=True), []
         )
     def test_in_static_equilibrium(self):
+        print(cos(45))
+        print(cos(180-45))
+        print(cos(radians(180-45)))
+        print(sin(180-45))
+        print(sin(radians(180-45)))
         forces = array(
         [polar_force(718.4, 180 - 30), polar_force(879.54, 45), polar_force(100, -90)]
     )
