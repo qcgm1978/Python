@@ -64,11 +64,7 @@ if __name__ == "__main__":
 
     # Problem 1 in image_data/2D_problems.jpg
     forces = array(
-        [
-            polar_force(30 * 9.81, 15),
-            polar_force(215,  45),
-            polar_force(264,  30),
-        ]
+        [polar_force(30 * 9.81, 15), polar_force(215, 45), polar_force(264, 30),]
     )
 
     location = array([[0, 0], [0, 0], [0, 0]])
